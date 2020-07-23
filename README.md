@@ -14,4 +14,13 @@ We also added a User object(Can be redux storage) which stores the User data.
 
 User name and phone number is set in database (if user doesn't exist before) or just logs in if user already exist and navigate to chat screen. 
 
+###AuthLoadingScreen
+
+AuthLoadingScreen checks if the User phone already exists in storage it navigated to App stack otherwise AuthStack
+
+
+###HomeScreen
+
+When the user login in successfully, HomeScreen appears which renders all the users which are set in state componentWillMount. When the user is clicked it navigates to ChatScreen and shows all messages in a FlatList. When the new message is sent from the other user firebase ref get the new message in realtime using ref.child().on('child_added) and appedns the message in previous state of messageList.
+
 
